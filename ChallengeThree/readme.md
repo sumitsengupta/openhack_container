@@ -63,3 +63,12 @@ metadata:
     - will list all the pods within the cluster
 - kubectl delete pod pod-poi-img-pnxl7
     - will delete the specified pod
+
+## General kubectl commands to hunt down issues
+
+Here is a cheat sheet on some common kubectl commands:
+kubectl [command] [type] [name]
+|command|decsrip|
+|kubectl get|	used to view and find resources,can output JSON, YAML, or be directly formatted|
+|kubectl describe|retrieve extra information about a resources, needs a resource type and (optionally) a resource name|
+|kubectl logs|view container logs for debugging|
