@@ -6,6 +6,11 @@ Challenge five requires namespaces and seperating the deploys. The existing depl
 
 - For This challenge the two new namespaces are *Web* and *API*.
 ***
+### Resources
+- Keyvault = team11aksvault 
+    - access given to team11 AAD
+    - currenlty has 4 secretes
+
 #### Commands
 - create namespace
 ```
