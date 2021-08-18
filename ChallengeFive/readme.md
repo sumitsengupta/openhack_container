@@ -10,7 +10,7 @@ Challenge five requires namespaces and seperating the deploys. The existing depl
 - Keyvault = team11aksvault 
     - access given to team11 AAD
     - currenlty has 4 secretes
-
+- https://docs.microsoft.com/en-us/azure/aks/manage-azure-rbac
 #### Commands
 - create namespace
 ```
