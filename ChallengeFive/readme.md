@@ -5,6 +5,7 @@
 Challenge five requires namespaces and seperating the deploys. The existing deployment files have been modified to utilize the new namespaces.
 
 - For This challenge the two new namespaces are *Web* and *API*.
+# Service NEEDS to be in the SAME namespace as the related POD
 ***
 ### Resources
 - Keyvault = team11aksvault 
