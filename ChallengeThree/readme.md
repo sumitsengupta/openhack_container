@@ -68,7 +68,8 @@ metadata:
 
 Here is a cheat sheet on some common kubectl commands:
 kubectl [command] [type] [name]
-|command|decsrip|
-|kubectl get|	used to view and find resources,can output JSON, YAML, or be directly formatted|
-|kubectl describe|retrieve extra information about a resources, needs a resource type and (optionally) a resource name|
-|kubectl logs|view container logs for debugging|
+| command | decsript |
+|--|--|
+| kubectl get |	used to view and find resources,can output JSON, YAML, or be directly formatted |
+| kubectl describe | retrieve extra information about a resources, needs a resource type and (optionally) a resource name |
+| kubectl logs | view container logs for debugging |
