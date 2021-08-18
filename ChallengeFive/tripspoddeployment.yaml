@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pod-userjava-img
+  name: pod-trips-img
   namespace: api
   labels:
-    app: userjava
+    app: trips
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userjava
+      app: trips
   template:
     metadata:
       labels:
-        app: userjava
+        app: trips
     spec:
       containers:
-      - name: userjava-container
-        image: registrybwj5358.azurecr.io/user-java:1.0
+      - name: trips-container
+        image: registrybwj5358.azurecr.io/trips:1.0
         env:
         - name: SQL_USER
           value: "sqladminbWj5358"
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: userjava-service
+  name: trips-service
 spec:
   selector:
-    app: userjava
+    app: trips
   ports:
     - protocol: TCP
       port: 80

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pod-userprofile-img
-  namespace: ch5
+  namespace: api
   labels:
     app: userprofile
 spec:
