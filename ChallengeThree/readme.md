@@ -52,13 +52,14 @@ metadata:
 
 ## Commands to deploy and check resources within the cluster
 
-- kubectl port-forward service/poi-service 8080:80
-    - Port forwards the traffice to the service associated with the pod
-- kubectl get pods
-    - will list all the pods within the cluster
+
 - kubectl apply -f poipoddeployment.yml
     - This will deploy the contents to AKS. For us we have built both the Pod and Servce in one.
-- kubectl delete pod pod-poi-img-pnxl7
-    - will delete the specified pod
+- kubectl port-forward service/poi-service 8080:80
+    - Port forwards the traffice to the service associated with the pod
 - kubectl exec -it pod-poi-img-pnxl7 -- sh
     - get the shell to a container running in a pod
+- kubectl get pods
+    - will list all the pods within the cluster
+- kubectl delete pod pod-poi-img-pnxl7
+    - will delete the specified pod
