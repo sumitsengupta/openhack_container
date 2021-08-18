@@ -1,0 +1,62 @@
+#API Dev Edit/admin permission
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: api-dev
+  namespace: api
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["batch"]
+  resources:
+  - jobs
+  - cronjobs
+  verbs: ["*"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: api-dev-access
+  namespace: api
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: api-dev
+subjects:
+- kind: Group
+  namespace: api
+  name: 65c32625-8c4c-424e-84da-fb1530de7856
+---
+
+
+#Web Dev View Permission
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: web-dev
+  namespace: api
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["*"]
+  verbs:  ["list"]
+- apiGroups: ["batch"]
+  resources:
+  - jobs
+  - cronjobs
+  verbs:  ["list"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: web-dev-access
+  namespace: api
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: web-dev
+subjects:
+- kind: Group
+  namespace: api
+  name: 5874457f-5b20-4f9f-b9a0-ee49ef8e577b
