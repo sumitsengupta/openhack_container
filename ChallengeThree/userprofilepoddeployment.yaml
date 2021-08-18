@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-userprofile-img
+  labels:
+    app: userprofile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: userprofile
+  template:
+    metadata:
+      labels:
+        app: userprofile
+    spec:
+      containers:
+      - name: userprofile-container
+        image: registrybwj5358.azurecr.io/userprofile:1.0
+        env:
+        - name: SQL_USER
+          value: "sqladminbWj5358"
+        - name: SQL_PASSWORD
+          value: "bN1uq3Fc9"
+        - name: SQL_SERVER
+          value: "sqlserverbwj5358.database.windows.net"
+        - name: SQL_DBNAME
+          value: "mydrivingDB"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: userprofile-service
+spec:
+  selector:
+    app: userprofile
+  ports:
+    - protocol: TCP
+      port: 80
