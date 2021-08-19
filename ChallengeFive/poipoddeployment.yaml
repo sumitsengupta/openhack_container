@@ -28,8 +28,8 @@ spec:
             driver: secrets-store.csi.k8s.io
             readOnly: true
             volumeAttributes:
-              secretProviderClass: "team11aksvault" 
-        env:
+            secretProviderClass: "team11aksvault" 
+      env:
         - name: SQL_USER
           value: "sqladminbWj5358"
         - name: SQL_PASSWORD
