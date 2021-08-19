@@ -18,6 +18,17 @@ spec:
       containers:
       - name: poi-container
         image: registrybwj5358.azurecr.io/poi:1.0
+        volumeMounts:
+        - name: secrets-store-inline
+          mountPath: "/mnt/secrets-store"
+          readOnly: true
+      volumes:
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "team11aksvault" 
         env:
         - name: SQL_USER
           value: "sqladminbWj5358"
