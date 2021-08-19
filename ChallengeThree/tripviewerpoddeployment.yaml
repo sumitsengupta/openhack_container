@@ -27,6 +27,14 @@ spec:
           value: "sqlserverbwj5358.database.windows.net"
         - name: SQL_DBNAME
           value: "mydrivingDB"
+        - name: USER_API_ENDPOINT
+          value: "http://user-service.api"
+        - name: USERPROFILE_API_ENDPOINT
+          value: "http://userprofile-service.api"
+        - name: TRIPS_API_ENDPOINT
+          value: "http://trips-service.api"
+        - name: BING_MAPS_KEY
+          value: "Ahzgj8Q2ztPYiVRxRmeJ_vtZ_u_swz6RVd1zR9LzzRozVGrMqLpjYJ9705nDsjQM"           
 ---
 apiVersion: v1
 kind: Service

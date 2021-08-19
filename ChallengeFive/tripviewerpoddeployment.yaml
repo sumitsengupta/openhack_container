@@ -24,7 +24,7 @@ spec:
           - name: USERPROFILE_API_ENDPOINT
             value: "http://user-service.api"
           - name: TRIPS_API_ENDPOINT
-            value: "http://trips-service.api"
+            value: "http://trips-service"
           - name: BING_MAPS_KEY
             value: "Aj5lHDzdCgzQinbEYxyVbPYiOcMzRaZyLC1O_zM-k8ViwEzmusa287ZGlc9q8Qr" 
         volumeMounts:
