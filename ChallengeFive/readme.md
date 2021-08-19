@@ -28,6 +28,9 @@ kubectl apply -f [pod.yaml] --namespace=[name]
 
 az aks enable-addons --addons azure-keyvault-secrets-provider --name ch4aks --resource-group teamResources
 
+az aks disable-addons --addons azure-keyvault-secrets-provider --name ch4aks --resource-group teamResources
+
+
   "addonProfiles": {
     "azureKeyvaultSecretsProvider": {
       "config": {

@@ -28,16 +28,7 @@ spec:
             driver: secrets-store.csi.k8s.io
             readOnly: true
             volumeAttributes:
-              secretProviderClass: "team11aksvault"
-        env:
-        - name: SQL_USER
-          value: "sqladminbWj5358"
-        - name: SQL_PASSWORD
-          value: "bN1uq3Fc9"
-        - name: SQL_SERVER
-          value: "sqlserverbwj5358.database.windows.net"
-        - name: SQL_DBNAME
-          value: "mydrivingDB"
+              secretProviderClass: "team11aksvault"     
 ---
 apiVersion: v1
 kind: Service
