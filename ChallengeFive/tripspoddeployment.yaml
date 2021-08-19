@@ -36,6 +36,7 @@ metadata:
   name: trips-service
   namespace: api
 spec:
+  type: ClusterIP
   selector:
     app: trips
   ports:

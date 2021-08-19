@@ -37,6 +37,7 @@ metadata:
   name: poi-service
   namespace: api
 spec:
+  type: ClusterIP
   selector:
     app: poi
   ports:

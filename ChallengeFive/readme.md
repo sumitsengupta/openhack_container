@@ -55,3 +55,8 @@ az keyvault set-policy -n team11aksvault --secret-permissions backup delete get 
 
 - command used to verify pods are using csi
       kubectl get pods -n api -l 'app in (secrets-store-csi-driver, secrets-store-provider-azure)'
+
+
+#### Ingress controller
+
+helm install nginx-ingress stable nginx-ingress --namespace web --set controller.replicaCount=1 --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux
