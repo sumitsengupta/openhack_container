@@ -9,58 +9,59 @@ spec:
  rules:
   - http:
       paths:
-      - backend:
-          serviceName: poi-service
-          servicePort: 80
-        path: /api/poi/healthcheck
-
-
-      # - path: /api/poi
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: poi-service
-      #       port:
-      #         number: 80      
-      # - path: /api/trips/healthcheck
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: trips-service
-      #       port:
-      #         number: 80
-      # - path: /api/trips
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: trips-service
-      #       port:
-      #         number: 80
-      # - path: /api/user/healthcheck
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: userprofile-service
-      #       port:
-      #         number: 80
-      # - path: /api/user
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: userprofile-service
-      #       port:
-      #         number: 80
-      # - path: /api/user-java/healthcheck
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: userjava-service
-      #       port:
-      #         number: 80
-      # - path: /api/user-java
-      #   pathType: Prefix
-      #   backend:
-      #     service:
-      #       name: userjava-service
-      #       port:
-      #         number: 80 
+      - path: /api/poi/healthcheck
+        pathType: Prefix
+        backend:
+          service:
+            name: poi-service
+            port:
+              number: 80
+      - path: /api/poi
+        pathType: Prefix
+        backend:
+          service:
+            name: poi-service
+            port:
+              number: 80      
+      - path: /api/trips/healthcheck
+        pathType: Prefix
+        backend:
+          service:
+            name: trips-service
+            port:
+              number: 80
+      - path: /api/trips
+        pathType: Prefix
+        backend:
+          service:
+            name: trips-service
+            port:
+              number: 80
+      - path: /api/user/healthcheck
+        pathType: Prefix
+        backend:
+          service:
+            name: userprofile-service
+            port:
+              number: 80
+      - path: /api/user
+        pathType: Prefix
+        backend:
+          service:
+            name: userprofile-service
+            port:
+              number: 80
+      - path: /api/user-java/healthcheck
+        pathType: Prefix
+        backend:
+          service:
+            name: userjava-service
+            port:
+              number: 80
+      - path: /api/user-java
+        pathType: Prefix
+        backend:
+          service:
+            name: userjava-service
+            port:
+              number: 80 
