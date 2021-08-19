@@ -29,6 +29,7 @@ spec:
             readOnly: true
             volumeAttributes:
               secretProviderClass: "team11aksvault"   
+
 ---
 apiVersion: v1
 kind: Service
